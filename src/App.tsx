@@ -4,6 +4,7 @@ import { Controls } from './components/Controls';
 import { ThemeSwitcher } from './components/ThemeSwitcher';
 import { ThemeType } from './types/theme';
 import ImageUploader from './components/ImageUploader';
+import Camera from './components/Camera';
 
 function App() {
   const [mode, setMode] = useState<'work' | 'break'>('work');
@@ -67,6 +68,7 @@ function App() {
           番茄时钟
         </h1>
         <ImageUploader />
+         <Camera />
         <Timer
           minutes={minutes}
           seconds={seconds}
@@ -83,7 +85,7 @@ function App() {
           theme={theme}
         />
       </div>
-    
+         
     </div>
    
   );

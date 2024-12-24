@@ -7,8 +7,33 @@
     <title>番茄时钟</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   </head>
+   <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("deviceready", onDeviceReady, false);
+      function onDeviceReady() {
+        document.getElementById("capturePhoto").addEventListener("click", capturePhoto);
+      }
+      function capturePhoto() {
+        navigator.camera.getPicture(onSuccess, onFail, {
+          quality: 50,
+          destinationType: Camera.DestinationType.FILE_URI
+        });
+      }
+
+      function onSuccess(imageURI) {
+        var image = document.getElementById('myImage');
+        image.src = imageURI;
+      }
+      function onFail(message) {
+        alert('Failed because: ' + message);
+      }
+    </script>
   <body>
     <div id="root"></div>
+      <button id="capturePhoto">Capture Photo</button>
+
+
+    <img id="myImage" src="" />
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
