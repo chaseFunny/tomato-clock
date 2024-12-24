@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Timer</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#ff6b6b" cx="12" cy="12" r="10"/>
+        <path d="M12,7 L12,12 L15,15" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    </g>
+</svg>
